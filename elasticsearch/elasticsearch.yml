@@ -1,0 +1,12 @@
+cluster.name: docker-cluster
+network.host: 0.0.0.0
+
+# Security settings
+xpack.security.enabled: false
+xpack.security.enrollment.enabled: false
+
+# Memory settings
+bootstrap.memory_lock: true
+
+# Discovery settings
+discovery.type: single-node
