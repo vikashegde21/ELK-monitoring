@@ -21,7 +21,7 @@ services:
   api-app:
     image: node:alpine
     container_name: sample-api
-    command: sh -c "while true; do echo '{\"timestamp\":\"$(date -Iseconds)\",\"level\":\"info\",\"message\":\"API request processed\",\"response_time\":$(shuf -i 10-500 -n 1)}'; sleep $(shuf -i 1-10 -n 1); done"
+    command: sh -c "while true; do echo '{\"timestamp\":\"$$(date -Iseconds)\",\"level\":\"info\",\"message\":\"API request processed\",\"response_time\":$$(shuf -i 10-500 -n 1)}'; sleep $$(shuf -i 1-10 -n 1); done"
     logging:
       driver: json-file
       options:
